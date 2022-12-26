@@ -57,6 +57,11 @@ nav li:hover .sous{
     background-color: #fff;
 }
 
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
 #imgLab{
     width: 100px;
     height:50px;
