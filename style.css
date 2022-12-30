@@ -209,3 +209,33 @@ footer a{
     border-right: none;
     padding-right: 0;
 }
+
+/* Page Membres*/
+
+#card{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border-style: solid;
+    text-align: center;
+}
+
+.imgCard{
+    width: 10%;
+}
+
+.nomPers{
+    width: 100%;
+}
+
+.infoPers p{
+    width: 100%;
+}
+
+.logoPers{
+    width: 100%;
+}
+
+.keyWords{
+    width: 100%;
+}
