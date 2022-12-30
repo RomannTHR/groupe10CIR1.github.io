@@ -217,7 +217,7 @@ footer a{
     flex-direction: column;
     width: 20%;
     border-style: solid;
-    text-align: center;
+    /* ne pas faire text-align :center mettre plutot padding avec des % pour que ça rende bien dans la card*/
 }
 
 .imgCard{
