@@ -239,3 +239,59 @@ footer a{
 .keyWords{
     width: 100%;
 }
+
+/* Page Contactez-Nous */
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 500px;
+    padding-right: 500px;
+}
+#bodycontact p{
+    color: #2D2BA4;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+#backgroundcontact input :placeholder-shown{
+    color: #B6A0A0;
+}
+#bodycontact .form{
+    background-color: #D9D9D9;
+}
+#bodycontact .form input{
+    background-color: #D9D9D9;
+}
+#bodycontact .form textarea{
+    background-color: #D9D9D9;
+}
+#bodycontact textarea{
+    height: 200px;
+    width: 200px;
+    left: 191px;
+    top: 317px;
+    border-radius: 0px;
+    border: hidden; 
+    border: 0;
+    width: 500px;
+
+}
+#bodycontact input{
+    border: hidden; 
+    border: 0;
+    height: 30px;
+    width: 450px;
+    top: 20px;
+    border-left-style : solid;
+    border-left-width: 1px;
+    padding-left:10px;
+}
+#bodycontact .down input{
+    border: hidden;
+    border: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
