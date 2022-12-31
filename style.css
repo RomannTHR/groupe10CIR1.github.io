@@ -241,7 +241,7 @@ footer a{
 }
 
 /* Page Contactez-Nous */
-
+    
 form{
     display: flex;
     flex-direction: column;
@@ -249,6 +249,7 @@ form{
     padding-left: 500px;
     padding-right: 500px;
 }
+
 #bodycontact p{
     color: #2D2BA4;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
