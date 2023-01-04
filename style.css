@@ -296,3 +296,72 @@ form{
     padding-left: 50px;
     padding-right: 50px;
 }
+bodyproject #main{
+    display: flex;
+    flex-direction: column;
+}
+#bodyproject h2{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 25px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#bodyproject h3{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 20px;
+}
+#bodyproject p{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 13px;
+}
+#bodyproject span{
+    font-weight: bold;
+}
+#bodyproject .seas{
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#bodyoemploi .infos{
+    font-weight: bold;
+    text-decoration: underline;
+}
+#bodyemploi span{
+    font-weight: bold;
+}
+#bodyoemploi span .italic{
+    font-weight: normal;
+    font-style: italic;
+}
+#bodyemploi h4{
+    font-weight: bold;
+}
+#bodyemploi .offres{
+    text-align: center;
+}
+#bodyemploi{
+    display: flex;
+    flex-direction: column;
+}
+#bodypublications .carrebleu{
+    width  : 50px;
+    height : 50px;
+    background : blue;
+}
+#bodypublications .carrerose{
+    width  : 50px;
+    height : 50px;
+    background : pink;
+}
+#bodypublications .post{
+    text-align: center;
+}
+#bodypublications{
+    display: flex;
+    flex-direction: column;
+}
+#bodypublications span{
+    font-weight: bold;
+}
