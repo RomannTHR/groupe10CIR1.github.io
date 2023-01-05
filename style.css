@@ -248,6 +248,7 @@ form{
     text-align: center;
     padding-left: 500px;
     padding-right: 500px;
+    justify-content: center;
 }
 
 #bodycontact p{
@@ -324,9 +325,9 @@ bodyproject #main{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#bodyoemploi .infos{
+/*offres d'emploi*/
+#bodyemploi .infos{
     font-weight: bold;
-    text-decoration: underline;
 }
 #bodyemploi span{
     font-weight: bold;
@@ -339,24 +340,60 @@ bodyproject #main{
     font-weight: bold;
 }
 #bodyemploi .offres{
-    text-align: center;
+   font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+   padding-left: 50px;
+   padding-right: 50px;
+}
+#bodyemploi ul{
+    margin-left: 50px;
 }
 #bodyemploi{
     display: flex;
     flex-direction: column;
 }
+#bodyemploi h2{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    margin-left: 25px;
+    background-color: #3D3D3D;
+    color: white;
+}
+#bodyemploi h3{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    margin-left: 45px;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+#bodyemploi h1{
+    font-weight: bold;
+    text-align: center;
+}
+#bodyemploi .offres a{
+    color: grey;
+}
+#bodyemploi a:hover{
+    background-color: #3D3D3D;
+    color: white;
+}
+/*publications*/
 #bodypublications .carrebleu{
-    width  : 50px;
-    height : 50px;
+    width  : 35px;
+    height : 35px;
     background : blue;
+    margin-left: 25px;
+
 }
 #bodypublications .carrerose{
-    width  : 50px;
-    height : 50px;
+    width  : 35px;
+    height : 35px;
     background : pink;
+    margin-left: 25px;
+
 }
 #bodypublications .post{
     text-align: center;
+    display: inline-block;
 }
 #bodypublications{
     display: flex;
@@ -364,4 +401,34 @@ bodyproject #main{
 }
 #bodypublications span{
     font-weight: bold;
+}
+/*partenaires*/
+#bodypartenaires h2{
+    padding-left: 50px;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+}
+#bodypartenaires .img{
+    width: 200px;
+}
+
+#bodypartenaires #partenairesnationaux{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#bodypartenaires #partenairesinternationaux{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#bodypartenaires ul.words li{
+    display: inline-block;
+    background-color: #3D3D3D;
+    color: white;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    font-size: 12px;
+}
+#bodypartenaires ul.words{
+    padding-top: 15px;
+    padding-bottom: 25px;
 }
