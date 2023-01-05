@@ -3,17 +3,22 @@
     padding: 0;
 }
 
-
-
-
-
 /*navbar et sous-menus*/
+
+
+#smallnav{
+    display:none;
+}
+
+
+
 nav{
     border-bottom-style: solid;
     border-bottom-width: 1px;
     background-color: #C2C2C2;
     position : sticky;
 }
+
 
 
 
@@ -110,6 +115,59 @@ footer a{
     height: 10px;
     width: 10px;
 }
+
+@media screen and (max-width : 980px){
+    nav{
+        display :none;
+    }
+
+    #newnav{
+        display: none;
+    }
+
+
+    #smallnav{
+        display:block;
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+
+
+
+    #smallnav:active #newnav{
+        display: block;
+    }
+
+    #smallnav:active body{
+        display: block;
+    }
+
+    #newnav{
+        position: absolute;
+        margin-top: 25%;
+        margin-left: 25%;
+    }
+
+    #newnav ul li a {
+        display: block;
+        border: 1px solid;
+        padding: .5em 1em;
+        margin: .5em; 
+        text-decoration: none;
+        color:black;
+        font-size: 300%;
+    }
+
+    #newnav li{
+        position: relative;
+        list-style-type: none;
+    }
+
+
+}
+
+
+
 
 /*Page Accueil*/
 
@@ -232,6 +290,7 @@ footer a{
 
 #imgPers{
     border-radius: 50%;
+    width: 50%;
 }
 
 #imgPersJ{
@@ -241,8 +300,6 @@ footer a{
 
 .imgCard{
     width: 10%;
-    
-    
 }
 
 .nomPers{
@@ -348,6 +405,12 @@ hr{
     text-align: center;
 }
 
+
+@media screen and (max-width:980px){
+    .card{
+        width: 70%;
+    }
+}
 
 
 
