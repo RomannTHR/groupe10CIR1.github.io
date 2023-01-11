@@ -118,35 +118,37 @@ footer a{
 
 @media screen and (max-width : 980px){
     nav{
-        display :none;
-    }
-
-    #newnav{
         display: none;
     }
 
 
     #smallnav{
-        display:block;
-        margin-top: 1%;
-        margin-left: 1%;
-    }
-
-
-
-    #smallnav:active #newnav{
         display: block;
     }
 
-    #smallnav:active body{
-        display: block;
-    }
+
+    
 
     #newnav{
+        display: none;
         position: absolute;
         margin-top: 25%;
         margin-left: 25%;
     }
+
+
+
+    #smallnav:hover #newnav{
+        display: block;
+        backdrop-filter: blur(8px);
+    }
+
+    #smallnav:hover #contenuMembres{
+        display: none;
+    }
+
+
+
 
     #newnav ul li a {
         display: block;
@@ -161,8 +163,37 @@ footer a{
     #newnav li{
         position: relative;
         list-style-type: none;
+        z-index:2;
     }
 
+
+
+
+
+    .sous{
+        display: none;
+        position:sticky;
+        width: 100%;
+        background-color:#fff;
+        backdrop-filter: blur(8px);
+    }
+    
+    .sous a{
+        border:none;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        background-color: none;
+    }
+    
+    #newnav li:hover .sous{
+        display:block;
+    }
+    
+    
+    .deroulant > a::after{
+        content:" ▼";
+        font-size: 12px;
+    }
 
 }
 
