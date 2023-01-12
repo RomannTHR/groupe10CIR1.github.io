@@ -367,7 +367,7 @@ form{
     justify-content: center;
 }
 
-#bodycontact p{
+#bodycontact form p{
     color: #2D2BA4;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     margin-top: 25px;
@@ -413,7 +413,7 @@ form{
     padding-left: 50px;
     padding-right: 50px;
 }
-bodyproject #main{
+#bodyproject #main{
     display: flex;
     flex-direction: column;
 }
@@ -424,18 +424,18 @@ bodyproject #main{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#bodyproject h3{
+#main h3{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 20px;
 }
-#bodyproject p{
+#main p{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 13px;
 }
-#bodyproject span{
+#main span{
     font-weight: bold;
 }
-#bodyproject .seas{
+#main .seas{
     padding-left: 125px;
     padding-right: 125px;
     padding-top: 20px;
@@ -497,19 +497,24 @@ bodyproject #main{
     width  : 35px;
     height : 35px;
     background : blue;
-    margin-left: 25px;
+
 
 }
 #bodypublications .carrerose{
     width  : 35px;
     height : 35px;
     background : pink;
-    margin-left: 25px;
 
+
+}
+#bodypublications p{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
 }
 #bodypublications .post{
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
 }
 #bodypublications{
     display: flex;
@@ -518,10 +523,19 @@ bodyproject #main{
 #bodypublications span{
     font-weight: bold;
 }
+#bodypublications h1{
+    text-align: center;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    color: grey;
+    margin: 50px;
+    font-size: 50px;
+}
 /*partenaires*/
 #bodypartenaires h2{
     padding-left: 50px;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    text-decoration: underline;
+    text-align: center;
 }
 #bodypartenaires .img{
     width: 200px;
@@ -547,4 +561,28 @@ bodyproject #main{
 #bodypartenaires ul.words{
     padding-top: 15px;
     padding-bottom: 25px;
+}
+#bodypartenaires hr{
+    margin: 100px;
+}
+#bodypartenaires h1{
+    text-align: center;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    color: grey;
+    margin: 50px;
+    font-size: 50px;
+}
+/*plan d'accès*/
+#bodyacces .site{
+    margin: 50px;
+}
+#bodyacces .site p{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+}
+#bodyacces .site a{
+    color:#B6A0A0;
+}
+#bodyacces .site a:hover{
+    color:#C2C2C2;
+    text-decoration: none;
 }
