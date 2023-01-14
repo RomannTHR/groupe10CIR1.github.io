@@ -283,12 +283,12 @@ footer a{
 #description h2{
     color : #001D84;
     margin-bottom: 2%;
-    font-size: 4vh;
+    font-size: 4vw;
 }
 
 #description p{
     color: #283C81;
-    font-size:3vh;
+    font-size:3vw;
 }
 
 
@@ -322,7 +322,7 @@ footer a{
 }
 
 #Actualites h3{
-    font-size: 4vh;
+    font-size: 4vw;
     color: #001D84;
 }
 
@@ -339,7 +339,7 @@ footer a{
     border-right-style : solid;
     border-right-width: 1px ;
     padding-right: 2%;
-    font-size: 2vh;
+    font-size: 2vw;
 }
 
 .actu h4{
@@ -349,7 +349,7 @@ footer a{
 }
 
 .actu p{
-    font-size : 2vh;
+    font-size : 2vw;
     width: 70%;
     margin-left: 15%;
 }
@@ -415,6 +415,48 @@ footer a{
     margin-top : 2%;
     box-shadow: 1px 1px 5px 3px #656565;
 }
+
+
+/*Page plateformes technologiques*/
+
+.document{
+    display: flex;
+    margin-top : 2vw;
+    border-top-style : solid;
+    border-bottom-style : solid;
+    border-top-width : 0.5px;
+    border-bottom-width : 0.5px;
+    padding-top : 1vw;
+    padding-bottom : 1vw;
+}
+
+#partTop{
+    text-align: center;
+    
+}
+
+
+.document .imgDoc{
+    position:relative;
+    margin-left : 1vw;
+    z-index : -2;
+}
+
+#imgChambre{
+    margin-top : 1.2vw;
+}
+
+
+.document h3{
+    padding-left: 1vw;
+    color : #0300ab;
+}
+
+.document p{
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
 
 
 
