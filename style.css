@@ -430,9 +430,17 @@ footer a{
     padding-bottom : 1vw;
 }
 
-#partTop{
+
+#partTop p{
+    margin-top : 2vw;
+    margin-left : 25vw;
+    margin-bottom : 4vw;
+    width : 50vw;
     text-align: center;
-    
+    background-color: #bfcef3 ;
+    padding-top : 1vw;
+    padding-bottom : 1vw;
+    border-radius: 10px;
 }
 
 
