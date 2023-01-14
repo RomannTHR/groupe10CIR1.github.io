@@ -413,6 +413,8 @@ form{
     padding-left: 50px;
     padding-right: 50px;
 }
+/*projet*/
+
 #bodyproject #main{
     display: flex;
     flex-direction: column;
@@ -424,6 +426,9 @@ form{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+#bodyproject #main img{
+    width: 175px;
+}
 #main h3{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 20px;
@@ -431,15 +436,37 @@ form{
 #main p{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 13px;
+    margin-left: 25px;
 }
 #main span{
     font-weight: bold;
 }
 #main .seas{
+    display: grid;
+    grid-template-rows: 100px,400px,100px;
+    grid-template-columns: 200px,500px,200px;
     padding-left: 125px;
     padding-right: 125px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+#bodyproject .seas h3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#bodyproject .seas img{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#bodyproject .seas p{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 /*offres d'emploi*/
 #bodyemploi .infos{
@@ -511,10 +538,26 @@ form{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
 }
 #bodypublications .post{
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 150px,750px;
     margin: 50px;
+    grid-column-gap: 25px;
+}
+#bodypublications .post:hover{
+    background-color: #C2C2C2;
+}
+#bodypublications .post div{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+#bodypublications .post p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 #bodypublications{
     display: flex;
@@ -575,14 +618,66 @@ form{
 /*plan d'accès*/
 #bodyacces .site{
     margin: 50px;
+    display: grid;
+    grid-template-columns: 450px,450px;
+    grid-template-rows: 200px,500px,200px;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
 }
+#bodyacces .site h2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    font-weight: bold;
+
+}
+#bodyacces .site .train{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-width:3px;
+    border-style:solid;
+    border-color:black;
+}
+#bodyacces .site .Voiture{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-width:3px;
+    border-style:solid;
+    border-color:black;
+}
+#bodyacces .site .Avion{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-width:3px;
+    border-style:solid;
+    border-color:black;
+}
+#bodyacces .site .Avion:hover{
+    background-color: #ECCA42;
+}
+#bodyacces .site .Voiture:hover{
+    background-color: #F05454;
+}
+#bodyacces .site .train:hover{
+    background-color: #C2C2C2;
+}
+
 #bodyacces .site p{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
 }
 #bodyacces .site a{
-    color:#B6A0A0;
+    color:black;
+    font-weight: bold;
 }
 #bodyacces .site a:hover{
-    color:#C2C2C2;
+    color: grey;
     text-decoration: none;
 }
