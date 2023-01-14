@@ -646,7 +646,7 @@ form{
     justify-content: center;
 }
 
-#bodycontact p{
+#bodycontact form p{
     color: #2D2BA4;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     margin-top: 25px;
@@ -692,7 +692,9 @@ form{
     padding-left: 50px;
     padding-right: 50px;
 }
-bodyproject #main{
+/*projet*/
+
+#bodyproject #main{
     display: flex;
     flex-direction: column;
 }
@@ -703,22 +705,47 @@ bodyproject #main{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#bodyproject h3{
+#bodyproject #main img{
+    width: 175px;
+}
+#main h3{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 20px;
 }
-#bodyproject p{
+#main p{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 13px;
+    margin-left: 25px;
 }
-#bodyproject span{
+#main span{
     font-weight: bold;
 }
-#bodyproject .seas{
+#main .seas{
+    display: grid;
+    grid-template-rows: 100px,400px,100px;
+    grid-template-columns: 200px,500px,200px;
     padding-left: 125px;
     padding-right: 125px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+#bodyproject .seas h3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#bodyproject .seas img{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#bodyproject .seas p{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 /*offres d'emploi*/
 #bodyemploi .infos{
@@ -776,19 +803,40 @@ bodyproject #main{
     width  : 35px;
     height : 35px;
     background : blue;
-    margin-left: 25px;
+
 
 }
 #bodypublications .carrerose{
     width  : 35px;
     height : 35px;
     background : pink;
-    margin-left: 25px;
+
 
 }
+#bodypublications p{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+}
 #bodypublications .post{
-    text-align: center;
-    display: inline-block;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 150px,750px;
+    margin: 50px;
+    grid-column-gap: 25px;
+}
+#bodypublications .post:hover{
+    background-color: #C2C2C2;
+}
+#bodypublications .post div{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+#bodypublications .post p{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 #bodypublications{
     display: flex;
@@ -797,10 +845,19 @@ bodyproject #main{
 #bodypublications span{
     font-weight: bold;
 }
+#bodypublications h1{
+    text-align: center;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    color: grey;
+    margin: 50px;
+    font-size: 50px;
+}
 /*partenaires*/
 #bodypartenaires h2{
     padding-left: 50px;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    text-decoration: underline;
+    text-align: center;
 }
 #bodypartenaires .img{
     width: 200px;
@@ -826,4 +883,80 @@ bodyproject #main{
 #bodypartenaires ul.words{
     padding-top: 15px;
     padding-bottom: 25px;
+}
+#bodypartenaires hr{
+    margin: 100px;
+}
+#bodypartenaires h1{
+    text-align: center;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    color: grey;
+    margin: 50px;
+    font-size: 50px;
+}
+/*plan d'accès*/
+#bodyacces .site{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 450px,450px;
+    grid-template-rows: 200px,500px,200px;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+}
+#bodyacces .site h2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+    font-weight: bold;
+
+}
+#bodyacces .site .train{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-width:3px;
+    border-style:solid;
+    border-color:black;
+}
+#bodyacces .site .Voiture{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-width:3px;
+    border-style:solid;
+    border-color:black;
+}
+#bodyacces .site .Avion{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-width:3px;
+    border-style:solid;
+    border-color:black;
+}
+#bodyacces .site .Avion:hover{
+    background-color: #ECCA42;
+}
+#bodyacces .site .Voiture:hover{
+    background-color: #F05454;
+}
+#bodyacces .site .train:hover{
+    background-color: #C2C2C2;
+}
+
+#bodyacces .site p{
+    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
+}
+#bodyacces .site a{
+    color:black;
+    font-weight: bold;
+}
+#bodyacces .site a:hover{
+    color: grey;
+    text-decoration: none;
 }
