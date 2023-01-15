@@ -86,17 +86,18 @@ footer{
     position: static;
     justify-content: space-around;
     margin-top: 8%;
+    height : 10vw;
     width: 100%;
     bottom: 0;
     border-top-style :solid;
     border-top-width : 1px;
-    padding-top: 2em;
     background-color: #C2C2C2;
 }
 
 footer a{
     text-decoration: none;
     color : black;
+    font-size : 1vw;
 }
 
 
@@ -105,20 +106,75 @@ footer a{
     border-right-style : solid;
     border-right-width: 1px;
     padding-right: 4.5rem;
+    padding-left : 3vw;
+    height : 5vw;
+    margin-top : 2vw;
 }
 
-.last-contenu{
-    display: block;
+
+.--last{
+    border-right-style :none;
+    width : 20vw;
 }
 
-.last-contenu a{
-    text-align: center;
-}
+
+
 
 .linkdin{
     height: 10px;
     width: 10px;
 }
+
+footer p{
+    font-size : 1vw;
+}
+
+footer h3{
+    font-size : 1.5vw;
+    margin-bottom : 0.5vw;
+}
+
+
+@media screen and (max-width : 980px){
+    footer{
+        height : 20vw;
+        justify-content: normal;
+    }
+
+    .contenu{
+        width : 15vw;
+        height : 20vw;
+        padding-left : 0px;
+        padding-right : 0px;
+        text-align:center;
+        padding-right : 4vw;
+        padding-left: 4vw;
+    }
+
+    footer h3{
+        font-size: 2vw;
+    }
+
+    footer p{
+        font-size : 2vw;
+        width : 100%;
+    }
+
+    footer a{
+        font-size : 2vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 .c-btn-toggle{
     display: none;
@@ -127,6 +183,13 @@ footer a{
 .c-sidebar{
     display: none;
 }
+
+
+
+
+
+
+
 
 @media screen and (max-width : 980px){
     nav{
@@ -272,23 +335,33 @@ footer a{
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
-    padding-left: 20%;
-    padding-top: 17%;
-    text-align: justify;
-    border-right-style: solid;
-    border-width: 1px;
-    padding-right: 20%;
-}
-
-#description h2{
-    color : #001D84;
-    margin-bottom: 2%;
-    font-size: 4vh;
+    border-style : solid;
+    border-width : 1px;
+    border-radius : 10px;
+    margin-top : 7vw;
+    margin-bottom : 17vw;
+    margin-left: 4vw;
+    box-shadow: 1px 1px 5px 3px #656565;
 }
 
 #description p{
-    color: #283C81;
-    font-size:3vh;
+    font-size : 2vw;
+    text-align: center;
+}
+
+#description h2{
+    font-size : 3vw;
+    text-align: center;
+    color :#001D84;
+    margin-bottom: 1vw;
+}
+
+#description:hover{
+    background-color: #ffe788;
+}
+
+#description:hover h2{
+    background-color: #fff;
 }
 
 
@@ -322,7 +395,7 @@ footer a{
 }
 
 #Actualites h3{
-    font-size: 4vh;
+    font-size: 4vw;
     color: #001D84;
 }
 
@@ -339,7 +412,7 @@ footer a{
     border-right-style : solid;
     border-right-width: 1px ;
     padding-right: 2%;
-    font-size: 2vh;
+    font-size: 2vw;
 }
 
 .actu h4{
@@ -349,7 +422,7 @@ footer a{
 }
 
 .actu p{
-    font-size : 2vh;
+    font-size : 2vw;
     width: 70%;
     margin-left: 15%;
 }
@@ -358,6 +431,39 @@ footer a{
     border-right: none;
     padding-right: 0;
 }
+
+@media screen and (max-width : 980px){
+    #contenuAccueil{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenuAccueil p{
+        font-size :4vw;
+    }
+
+    #contenuAccueil h2{
+        font-size : 7vw;
+    }
+
+    #description{
+        width: 95%;
+        margin-left: 2vw;
+        margin-top: 10vw;
+        margin-bottom : 3vw;
+    }
+
+
+
+    #imgComp{
+        width : 100%;
+        margin-left : 0vw;
+    }
+}
+
+
+
+
 
 /* Page Thématiques*/
 
@@ -383,6 +489,7 @@ footer a{
     margin-right: 2%;
     padding: 1%;
     padding-top: 3%;
+    width : 90vw;
 }
 
 #textMiddle{
@@ -407,7 +514,7 @@ footer a{
 }
 
 #textBottom .axes p{
-    width: 600px;
+    width: 40vw;
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
@@ -416,7 +523,126 @@ footer a{
     box-shadow: 1px 1px 5px 3px #656565;
 }
 
+@media screen and (max-width : 980px){
+    #contenuThematiques{
+        display: flex;
+        flex-direction: column;
+        margin-top : 5vw;
+    }
 
+    #textBottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .axes{
+        margin-bottom : 4vw;
+    }
+
+    .axes p{
+        margin-left : 10vw;
+        font-size : 4vw;
+    }
+
+    #textBottom .axes p{
+        width : 70vw;
+    }
+}
+
+
+
+
+/*Page plateformes technologiques*/
+
+.document{
+    display: flex;
+    margin-top : 2vw;
+    border-top-style : solid;
+    border-bottom-style : solid;
+    border-top-width : 0.5px;
+    border-bottom-width : 0.5px;
+    padding-top : 1vw;
+    padding-bottom : 1vw;
+}
+
+
+#partTop p{
+    margin-top : 2vw;
+    margin-left : 25vw;
+    margin-bottom : 4vw;
+    width : 50vw;
+    text-align: center;
+    background-color: #bfcef3 ;
+    padding-top : 1vw;
+    padding-bottom : 1vw;
+    border-radius: 10px;
+}
+
+
+.document .imgDoc{
+    margin-top: 1vw;
+    margin-left : 1vw;
+    z-index : -2;
+}
+
+#imgChambre{
+    margin-top : 15%;
+    width: 230px;
+}
+
+
+
+
+#imgMarex{
+    width: 230px;
+    height: 175px;
+}
+
+
+.document h3{
+    padding-left: 1vw;
+    color : #0300ab;
+}
+
+.document p{
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
+
+
+@media screen and (max-width : 980px){
+
+    #contenuPlateformes{
+        margin-top : 10vw;
+    }
+
+    #contenuPlateformes p{
+        font-size : 3vw;
+    }
+    .document h3{
+        text-align: center;
+    }
+
+    .document{
+        flex-direction: column;
+    }
+
+    .imgDoc{
+        text-align: center;
+    }
+
+    #imgChambre{
+        width : 100%;
+    }
+
+    #imgMarex{
+        width : 100%;
+        height : 100%;
+    }
+
+}
 
 
 
@@ -583,6 +809,25 @@ hr{
         width: 70%;
     }
 
+    .fiche{
+        width : 70%;
+    }
+
+    #contenuMembres{
+        margin-top : 5vw;
+    }
+
+    #contenuMembres p{
+        font-size : 2vw;
+    }
+
+    #contenuMembres h3{
+        font-size : 4vw;
+    }
+
+    #contenuMembres li{
+        font-size : 2vw;
+    }
 
 }
 
