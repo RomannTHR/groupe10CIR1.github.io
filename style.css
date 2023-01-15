@@ -850,9 +850,9 @@ form{
 #bodycontact form p{
     color: #2D2BA4;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
-    margin-top: 25px;
-    margin-bottom: 25px;
     font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 #backgroundcontact input :placeholder-shown{
     color: #B6A0A0;
