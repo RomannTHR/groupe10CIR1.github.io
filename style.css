@@ -875,7 +875,7 @@ form{
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    border-width:3px;
+    border-width:1px;
     border-style:solid;
     border-color:black;
 }
@@ -884,7 +884,7 @@ form{
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
-    border-width:3px;
+    border-width:1px;
     border-style:solid;
     border-color:black;
 }
@@ -893,7 +893,7 @@ form{
     grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    border-width:3px;
+    border-width:1px;
     border-style:solid;
     border-color:black;
 }
