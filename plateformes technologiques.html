@@ -12,40 +12,44 @@
 
 
    <body id="bodyacceuil">
-      <div class="c-header"></div>
 
-      <input type="checkbox" class="c-btn-toggle" id="btnToggle">
-      <label class="c-btn-icon" for="btnToggle">
-         <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
-         <div class="c-btn-bar c-btn-bar--horizontal"></div>
-         <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
-      </label>
+    <div id="c-bar">
+        <div class="c-header"></div>
 
-      <div class="c-sidebar">
-         <ul class="side-bar items">
-            <li><img id="c-imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" style="width : 200px"></li>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li class="c-deroulant">
-               <a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
-               <ul class="c-sous">
-                  <li><a href="thematiques de recherche.html">Thématiques de Recherche</a></li>
-                  <li><a href="plateformes technologiques.html">Plateformes Technologiques</a></li>
-               </ul>
-            </li>
-            <li><a href="membres.html">Membres</a></li>
-            <li><a href="projets.html">Projets</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="partenaires.html">Partenaires</a></li>
-            <li class="c-deroulant">
-               <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
-               <ul class="c-sous">
-                  <li><a href="contactez-nous.html"> Contactez-nous</a></li>
-                  <li><a href="plan d'acces.html"> Plan d'accès</a></li>
-                  <li><a href="offres d'emploi.html"> Offres d'emploi</a></li>
-               </ul>
-            </li>
-         </ul>
-      </div>
+        <input type="checkbox" class="c-btn-toggle" id="btnToggle">
+        <label class="c-btn-icon" for="btnToggle">
+           <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
+           <div class="c-btn-bar c-btn-bar--horizontal"></div>
+           <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
+        </label>
+  
+        <div class="c-sidebar">
+           <ul class="side-bar items">
+              <li><img id="c-imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" style="width : 200px"></li>
+              <li><a href="accueil.html">Accueil</a></li>
+              <li class="c-deroulant">
+                 <a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
+                 <ul class="c-sous">
+                    <li><a href="thematiques de recherche.html">Thématiques de Recherche</a></li>
+                    <li><a href="plateformes technologiques.html">Plateformes Technologiques</a></li>
+                 </ul>
+              </li>
+              <li><a href="membres.html">Membres</a></li>
+              <li><a href="projets.html">Projets</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="partenaires.html">Partenaires</a></li>
+              <li class="c-deroulant">
+                 <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
+                 <ul class="c-sous">
+                    <li><a href="contactez-nous.html"> Contactez-nous</a></li>
+                    <li><a href="plan d'acces.html"> Plan d'accès</a></li>
+                    <li><a href="offres d'emploi.html"> Offres d'emploi</a></li>
+                 </ul>
+              </li>
+           </ul>
+        </div>
+    </div>
+
 
 
 
@@ -87,7 +91,7 @@
             <p>Les travaux de l’équipe débouchent souvent sur une preuve de concept, une réalisation de prototypes ou un déploiement de plateformes technologiques. Ces plateformes sont à la fois un outil interne pour mener des expérimentations et aussi un moyen de communication vers nos partenaires.</p>
         </div> 
         <div class="document">
-            <div class="imgDoc"><img id="imgChambre" src="Images/chambre connecté.png" alt="img chambre connecté" style="width: 230px;"></div>
+            <div class="imgDoc"><img id="imgChambre" src="Images/chambre connecté.png" alt="img chambre connecté"></div>
             <div class="textDoc">
                 <h3>Chambre connectée (Living Lab):</h3>
                 <p>Le living Lab est le fruit de collaboration avec l’entreprise de mutuelle santé Malakoff Médéric. Initialement, ce Living Lab avait pour but de détecter la chute des personnes âgées sans utiliser de capteurs portés (bracelet, médaillon...). Une solution a été proposée en utilisant un capteur de type Kinect permettant de garantir le respect de la vie privée et de connaitre à chaque instant la position de la personne dans le studio. Afin d'étendre les possibilités du studio, un ensemble de capteurs ont été ajoutés : prises connectées, capteurs d'environnements, température, lumière, humidité, gaz...), capteurs de consommation (électricité, eau), Caméras, micro et haut parleurs.
@@ -96,7 +100,7 @@
             </div>
         </div>
         <div class="document">
-            <div class="imgDoc"><img id="imgMarex" src="Images/marex mcdo.jpg" alt="marex mcdo" style="width: 230px;height: 175px;"></div>
+            <div class="imgDoc"><img id="imgMarex" src="Images/marex mcdo.jpg" alt="marex mcdo"></div>
             <div class="textDoc">
                 <h3>Environnement hybrides connectés:</h3>
                 <p>Cette plateforme est en cours de développement et vise à offrir des services à la personne dans des environnements indoor (bureau connecté, école connectée, usine connectée, ...). Parmi les services, nous envisageons l’étude du comportement des personnes, ladétection d’anomalies et la sécurité de l’environnement. Deux enjeux majeurs sont traités : (1) l’application des algorithmes d’intelligence artificielle qui prend tout son sens pour la prédiction d’évènements à risque ; (2) la mise en place de moyens numériques interopérables comme une architecture réseau dédiée et des technologies d’acquisition et de communications standards permettant l’accès aux données et la centralisation/distribution de la prise de décision.</p>
@@ -135,7 +139,7 @@
             <p>2 Rue Robert d’Arbrissel, 35000 Rennes</p>
             <a href="tel:+33230130250">02 30 13 02 50</a>
          </div>
-         <div class="last-contenu">
+         <div class="contenu --last">
             <h3>Developpeurs Web</h3>
             <a href="linkdin.fr">  <img class="linkdin" src="Images/image linkdin.png"></img> Romann THUREAU</a>
             <br>
