@@ -843,9 +843,7 @@ hr{
 form{
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding-left: 500px;
-    padding-right: 500px;
+    align-items: center;
     justify-content: center;
 }
 
@@ -870,14 +868,11 @@ form{
 }
 #bodycontact textarea{
     height: 200px;
-    width: 200px;
+    width: 500px;
     left: 191px;
     top: 317px;
     border-radius: 0px;
     border: hidden; 
-    border: 0;
-    width: 500px;
-
 }
 #bodycontact input{
     border: hidden; 
@@ -885,8 +880,6 @@ form{
     height: 30px;
     width: 450px;
     top: 20px;
-    border-left-style : solid;
-    border-left-width: 1px;
     padding-left:10px;
 }
 #bodycontact .down input{
@@ -1001,6 +994,14 @@ form{
     background-color: #3D3D3D;
     color: white;
 }
+#bodyemploi .box{
+    margin: 20px;
+}
+#bodyemploi .box:hover{
+    box-shadow: 10px 5px 5px black;
+    transition-duration: 1s;
+    background-color: #ECCA42;
+}
 /*publications*/
 #bodypublications .carrebleu{
     width  : 35px;
@@ -1025,9 +1026,12 @@ form{
     grid-template-columns: 150px,750px;
     margin: 50px;
     grid-column-gap: 25px;
+    padding: 20px;
 }
 #bodypublications .post:hover{
     background-color: #C2C2C2;
+    transition-duration :1s;
+    box-shadow: 10px 5px 5px black;
 }
 #bodypublications .post div{
     grid-column-start: 1;
@@ -1113,7 +1117,7 @@ form{
     grid-row-end: 2;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-weight: bold;
-
+    box-shadow: 10px 5px 5px black;
 }
 #bodyacces .site .train{
     grid-column-start: 1;
@@ -1123,6 +1127,7 @@ form{
     border-width:1px;
     border-style:solid;
     border-color:black;
+    padding: 20px;
 }
 #bodyacces .site .Voiture{
     grid-column-start: 1;
@@ -1132,6 +1137,7 @@ form{
     border-width:1px;
     border-style:solid;
     border-color:black;
+    padding: 20px;
 }
 #bodyacces .site .Avion{
     grid-column-start: 2;
@@ -1141,15 +1147,22 @@ form{
     border-width:1px;
     border-style:solid;
     border-color:black;
+    padding: 20px;
 }
 #bodyacces .site .Avion:hover{
     background-color: #ECCA42;
+    transition-duration: 1s;
+    box-shadow: 10px 5px 5px black;
 }
 #bodyacces .site .Voiture:hover{
     background-color: #F05454;
+    transition-duration: 1s;
+    box-shadow: 10px 5px 5px black;
 }
 #bodyacces .site .train:hover{
     background-color: #C2C2C2;
+    transition-duration: 1s;
+    box-shadow: 10px 5px 5px black;
 }
 
 #bodyacces .site p{
@@ -1162,4 +1175,7 @@ form{
 #bodyacces .site a:hover{
     color: grey;
     text-decoration: none;
+}
+#bodyacces .title{
+    display: flex;
 }
