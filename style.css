@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 html, body{
@@ -350,6 +351,12 @@ footer h3{
     box-shadow: 1px 1px 5px 3px #656565;
 }
 
+#description:hover{
+    transform: scale(1.1);
+    transition : transform 1s;
+}
+
+
 #description p{
     font-size : 2vw;
     text-align: center;
@@ -515,9 +522,10 @@ footer h3{
 
 #textBottom .axes{
     text-align:center;
-    
 
 }
+
+
 
 #textBottom .axes p{
     width: 40vw;
@@ -527,6 +535,11 @@ footer h3{
     padding: 50px;
     margin-top : 2%;
     box-shadow: 1px 1px 5px 3px #656565;
+}
+
+.axes p:hover{
+    transform: scale(1.05);
+    transition : transform 1s;
 }
 
 @media screen and (max-width : 980px){
@@ -660,8 +673,13 @@ footer h3{
 /* Page Membres*/
 
 #contenuMembres p{
-    font-size : 1.5vh;
+    font-size : 1.3vh;
 }
+
+.card p{
+    font-size : 2vw;
+}
+
 
 #contenuMembres h3{
     font-size : 1.5vh;
@@ -680,9 +698,14 @@ footer h3{
     width: 18%;
     border-style: solid;
     border-radius: 10px;
+
 }
 
-
+.card:hover{
+    transform: scale(1.05);
+    transition : transform 1s;
+    box-shadow: 10px 5px 5px rgb(101, 101, 101);
+}
 
 
 .imagePers{
@@ -768,6 +791,12 @@ hr{
     flex-direction: column;
     border-style:solid;
     border-radius: 10px;
+}
+
+.fiche:hover{
+    transform: scale(1.05);
+    transition : transform 1s;
+    box-shadow: 10px 5px 5px rgb(101, 101, 101);
 }
 
 .nomFiche{
@@ -894,20 +923,31 @@ form{
     padding-left: 50px;
     padding-right: 50px;
 }
+
+
+
+.imgForm{
+    width : 5%;
+    padding-top : 0.5vw;
+}
+
+
+
 /*projet*/
 
-#bodyproject #main{
+#main{
     display: flex;
     flex-direction: column;
 }
-#bodyproject h2{
+
+#main h2{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 25px;
     padding-left: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#bodyproject #main img{
+#main img{
     width: 175px;
 }
 #main h3{
@@ -931,57 +971,57 @@ form{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#bodyproject .seas h3{
+#main .seas h3{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 4;
 }
-#bodyproject .seas img{
+#main .seas img{
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
 }
-#bodyproject .seas p{
+#main .seas p{
     grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 4;
 }
 /*offres d'emploi*/
-#bodyemploi .infos{
+#contenuEmploi .infos{
     font-weight: bold;
 }
-#bodyemploi span{
+#contenuEmploi span{
     font-weight: bold;
 }
 #bodyoemploi span .italic{
     font-weight: normal;
     font-style: italic;
 }
-#bodyemploi h4{
+#contenuEmploi .offres h4{
     font-weight: bold;
 }
-#bodyemploi .offres{
+#contenuEmploi .offres{
    font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
    padding-left: 50px;
    padding-right: 50px;
 }
-#bodyemploi ul{
+#contenuEmploi ul{
     margin-left: 50px;
 }
-#bodyemploi{
+#contenuEmploi{
     display: flex;
     flex-direction: column;
 }
-#bodyemploi h2{
+#contenuEmploi h2{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     margin-left: 25px;
     background-color: #3D3D3D;
     color: white;
 }
-#bodyemploi h3{
+#contenuEmploi h3{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     margin-left: 45px;
     font-size: 30px;
@@ -989,44 +1029,45 @@ form{
     margin-bottom: 15px;
     text-decoration: underline;
 }
-#bodyemploi h1{
+#contenuEmploi h1{
     font-weight: bold;
     text-align: center;
 }
-#bodyemploi .offres a{
+#contenuEmploi .offres a{
     color: grey;
 }
-#bodyemploi a:hover{
+#contenuEmploi a:hover{
     background-color: #3D3D3D;
     color: white;
 }
-#bodyemploi .box{
+#contenuEmploi .box{
     margin: 20px;
 }
-#bodyemploi .box:hover{
+#contenuEmploi .box:hover{
     box-shadow: 10px 5px 5px black;
     transition-duration: 1s;
     background-color: #ECCA42;
 }
 /*publications*/
-#bodypublications .carrebleu{
+
+#contenuPublications .carrebleu{
     width  : 35px;
     height : 35px;
     background : blue;
 
 
 }
-#bodypublications .carrerose{
+#contenuPublications .carrerose{
     width  : 35px;
     height : 35px;
     background : pink;
 
 
 }
-#bodypublications p{
+#contenuPublications p{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
 }
-#bodypublications .post{
+#contenuPublications .post{
     text-align: left;
     display: grid;
     grid-template-columns: 150px,750px;
@@ -1034,79 +1075,86 @@ form{
     grid-column-gap: 25px;
     padding: 20px;
 }
-#bodypublications .post:hover{
+#contenuPublications .post:hover{
     background-color: #C2C2C2;
     transition-duration :1s;
     box-shadow: 10px 5px 5px black;
+    transform: scale(1.05);
+    transition : transform 1s;
 }
-#bodypublications .post div{
+#contenuPublications .post div{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 1;
 }
-#bodypublications .post p{
+#contenuPublications .post p{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 1;
 }
-#bodypublications{
+#contenuPublications{
     display: flex;
     flex-direction: column;
 }
-#bodypublications span{
+#contenuPublications span{
     font-weight: bold;
 }
-#bodypublications h1{
+#contenuPublications h1{
     text-align: center;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     color: grey;
     margin: 50px;
     font-size: 50px;
 }
+
+
+
 /*partenaires*/
-#bodypartenaires h2{
+#contenuPartenaires h2{
     padding-left: 50px;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     text-decoration: underline;
     text-align: center;
 }
-#bodypartenaires .img{
+#contenuPartenaires .img{
     width: 200px;
 }
 
-#bodypartenaires #partenairesnationaux{
+#contenuPartenaires #partenairesnationaux{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-#bodypartenaires #partenairesinternationaux{
+#contenuPartenaires #partenairesinternationaux{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-#bodypartenaires ul.words li{
+#contenuPartenaires ul.words li{
     display: inline-block;
     background-color: #3D3D3D;
     color: white;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 12px;
 }
-#bodypartenaires ul.words{
+#contenuPartenaires ul.words{
     padding-top: 15px;
     padding-bottom: 25px;
 }
-#bodypartenaires hr{
+#contenuPartenaires hr{
     margin: 100px;
 }
-#bodypartenaires h1{
+#contenuPartenaires h1{
     text-align: center;
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
     color: grey;
     margin: 50px;
     font-size: 50px;
 }
+
+
 /*plan d'accès*/
 #bodyacces .site{
     margin: 50px;
