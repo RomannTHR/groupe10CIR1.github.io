@@ -1254,6 +1254,13 @@ form{
     text-decoration: underline;
     text-align: center;
 }
+
+#contenuPartenaires h3{
+    font-family: Arial;
+    font-weight: bold;
+    color :#001D84;
+}
+
 #contenuPartenaires .img{
     width: 200px;
 }
@@ -1290,6 +1297,10 @@ form{
     font-size: 50px;
 }
 
+.partenaire{
+    margin-bottom : 2.5vw;
+    margin-top : 2.5vw;
+}
 
 /*plan d'accès*/
 #bodyacces .site{
