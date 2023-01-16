@@ -331,8 +331,8 @@ footer h3{
 
 #contenuAccueil{
     display : grid;
-    grid-template-rows: 60% 40%;
-    grid-template-columns: 40% 60%;
+    grid-template-rows: 40 60%;
+    grid-template-columns: 50% 50%;
 }
 
 
@@ -345,9 +345,10 @@ footer h3{
     border-style : solid;
     border-width : 1px;
     border-radius : 10px;
-    margin-top : 7vw;
-    margin-bottom : 17vw;
-    margin-left: 4vw;
+    margin-left : 4vw;
+    margin-bottom : 10vw;
+    margin-top : 5vw;
+    margin-right: 5vw;
     box-shadow: 1px 1px 5px 3px #656565;
 }
 
@@ -366,7 +367,7 @@ footer h3{
     font-size : 3vw;
     text-align: center;
     color :#001D84;
-    margin-bottom: 1vw;
+    margin-bottom: 2vw;
 }
 
 #description:hover{
@@ -395,6 +396,30 @@ footer h3{
     grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 3;
+    border-style: solid;
+    border-width: 1px;
+    margin-left : 4vw;
+    margin-bottom : 10vw;
+    margin-top : 5vw;
+    margin-right: 5vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 3px #656565;
+}
+
+#competences:hover{
+    transform: scale(1.1);
+    transition : transform 1s;
+}
+
+
+
+
+
+#competences h2{
+    font-size : 3vw;
+    text-align: center;
+    color :#001D84;
+    margin-bottom: 1vw;
 }
 
 #Actualites{
