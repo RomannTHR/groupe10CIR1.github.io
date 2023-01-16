@@ -465,7 +465,10 @@ footer h3{
         margin-top: 10vw;
         margin-bottom : 3vw;
     }
-
+    #description:hover{
+        transform: scale(1.03);
+        transition : transform 1s;
+    }
 
 
     #imgComp{
@@ -567,6 +570,12 @@ footer h3{
     #textBottom .axes p{
         width : 70vw;
     }
+
+    #firstText p{
+        font-size : 1.5vw;
+    }
+
+    
 }
 
 
@@ -1121,6 +1130,13 @@ form{
     transition-duration: 1s;
     background-color: #ECCA42;
 }
+
+.offres{
+    cursor:default;
+}
+
+
+
 /*publications*/
 
 #contenuPublications .carrebleu{
@@ -1182,6 +1198,9 @@ form{
     font-size: 50px;
 }
 
+.post{
+    cursor : default;
+}
 
 
 /*partenaires*/
@@ -1237,6 +1256,8 @@ form{
     grid-row-gap: 25px;
     grid-column-gap: 25px;
 }
+
+
 #bodyacces .site h2{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -1305,4 +1326,9 @@ form{
 }
 #bodyacces .title{
     display: flex;
+}
+
+
+#venir{
+    cursor :default;
 }
