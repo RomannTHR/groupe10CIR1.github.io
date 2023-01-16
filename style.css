@@ -983,11 +983,11 @@ form{
 }
 #main h3{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 #main p{
     font-family: 'Regular', 'Lucida Sans Regular', 'Lucida Grande';
-    font-size: 13px;
+    font-size: 1vw;
     margin-left: 25px;
 }
 #main span{
@@ -995,8 +995,8 @@ form{
 }
 #main .seas{
     display: grid;
-    grid-template-rows: 100px,400px,100px;
-    grid-template-columns: 200px,500px,200px;
+    grid-template-rows: 100px 150px 100px;
+    grid-template-columns: 200px 500px 200px;
     padding-left: 125px;
     padding-right: 125px;
     padding-top: 20px;
@@ -1025,6 +1025,36 @@ form{
     #main{
         margin-top : 10vw;
     }
+
+    #main .seas{
+        display: flex;
+        flex-direction: column;
+        padding-left : 5vw;
+    }
+
+    #main .seas img{
+        order : 1;
+        margin-left : 2.5vw;
+    }
+
+
+    #main p{
+        font-size : 3vw;
+    }
+
+    #main h2{
+        font-size : 5vw;
+    }
+
+    #main h3{
+        font-size : 4vw;
+        width : 110%;
+    }
+
+    #main .seas img{
+        width : 50%;
+    }
+
 }
 
 
