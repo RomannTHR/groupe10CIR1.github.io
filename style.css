@@ -189,6 +189,7 @@ footer h3{
 
 .c-sidebar{
     display: none;
+    z-index : 500;
 }
 
 
