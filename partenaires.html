@@ -2,12 +2,15 @@
 <html lang="fr">
     <head>
       <meta charset="utf-8">
+      <script src="JS/menu.js" defer></script>
       <link href="style.css" rel="stylesheet">
       <title>Partenaires</title>
       <script src="https://kit.fontawesome.com/bdc17f5942.js" crossorigin="anonymous"></script>
       <link href="https://fr.allfont.net/allfont.css?fonts=comic-sans-ms" rel="stylesheet" type="text/css" />
    </head>
    <body id="bodypartenaires">
+
+      <div class="loader"></div>
       <div id="c-bar">
          <div class="c-header"></div>
  
@@ -45,33 +48,36 @@
          </div>
      </div>
  
-      <nav>
-         <ul>
-            <li><a class="button" href="accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
-            <li class="deroulant">
-               <a class="button" href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
-               <ul class="sous">
-                  <li><a href="thematiques de recherche.html">Thématiques de Recherche</a></li>
-                  <li><a href="plateformes technologiques.html">Plateformes Technologiques</a></li>
-               </ul>
-            </li>
+     <nav>
+      <ul>
+         <li>
+            <ul id="horlogeid"></ul>
+            <ul id="compte"></ul>
+         </li>
+         <li><a class="button" href="accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
+         <li class="deroulant">
+            <a class="button" href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
+            <ul class="sous">
+               <li><a class="button" href="thematiques de recherche.html">Thématiques de Recherche</a></li>
+               <li><a class="button" href="plateformes technologiques.html">Plateformes Technologiques</a></li>
+            </ul>
+         </li>
 
-            <li><a class="button" href="membres.html"><i class="fa-sharp fa-solid fa-user"></i> Membres</a></li>
-            <li><a class="button" href="projets.html"><i class="fa-sharp fa-solid fa-briefcase"></i> Projets</a></li>
-            <li><a class="button" href="publications.html"><i class="fa-solid fa-camera-retro"></i> Publications</a></li>
-            <li><a class="button" href="partenaires.html"><i class="fa-solid fa-handshake"></i> Partenaires</a></li>
-            <li class="deroulant">
-               <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
-               <ul class="sous">
-                  <li><a href="contactez-nous.html"> Contactez-nous</a></li>
-                  <li><a href="plan d'acces.html"> Plan d'accès</a></li>
-                  <li><a href="offres d'emploi.html"> Offres d'emploi</a></li>
-               </ul>
-            </li>
-            <li><img id="imgLab" src="Images/LabISEN.png" alt="Logo LabISEN"></li>
-         </ul>
-      </nav>
-
+         <li><a id="memBut" class="button"><i class="fa-sharp fa-solid fa-user"></i> Membres</a></li>
+         <li><a class="button" href="projets.html"><i class="fa-sharp fa-solid fa-briefcase"></i> Projets</a></li>
+         <li><a class="button" href="publications.html"><i class="fa-solid fa-camera-retro"></i> Publications</a></li>
+         <li><a class="button" href="partenaires.html"><i class="fa-solid fa-handshake"></i> Partenaires</a></li>
+         <li class="deroulant">
+            <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
+            <ul class="sous">
+               <li><a class="button" href="contactez-nous.html"> Contactez-nous</a></li>
+               <li><a class="button" href="plan d'acces.html"> Plan d'accès</a></li>
+               <li><a class="button" href="offres d'emploi.html"> Offres d'emploi</a></li>
+            </ul>
+         </li>
+         <li><img id="imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" onclick="redirect()"></li>
+      </ul>
+   </nav>
 
       <div id="contenuPartenaires">
          <h1>Nos partenaires</h1>

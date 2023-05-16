@@ -3,6 +3,7 @@
 
     <head>
       <meta charset="utf-8">
+      <script src="JS/menu.js" defer></script>
       <link href="style.css" rel="stylesheet">
       <title>Membres</title>
       <script src="https://kit.fontawesome.com/bdc17f5942.js" crossorigin="anonymous"></script>
@@ -13,40 +14,46 @@
 
 
    <body id="bodyacceuil">
-      <div class="c-header"></div>
 
-      <input type="checkbox" class="c-btn-toggle" id="btnToggle">
-      <label class="c-btn-icon" for="btnToggle">
-         <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
-         <div class="c-btn-bar c-btn-bar--horizontal"></div>
-         <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
-      </label>
 
-      <div class="c-sidebar">
-         <ul class="side-bar items">
-            <li><img id="c-imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" style="width : 200px"></li>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li class="c-deroulant">
-               <a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
-               <ul class="c-sous">
-                  <li><a href="thematiques de recherche.html">Thématiques de Recherche</a></li>
-                  <li><a href="plateformes technologiques.html">Plateformes Technologiques</a></li>
-               </ul>
-            </li>
-            <li><a href="membres.html">Membres</a></li>
-            <li><a href="projets.html">Projets</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="partenaires.html">Partenaires</a></li>
-            <li class="c-deroulant">
-               <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
-               <ul class="c-sous">
-                  <li><a href="contactez-nous.html"> Contactez-nous</a></li>
-                  <li><a href="plan d'acces.html"> Plan d'accès</a></li>
-                  <li><a href="offres d'emploi.html"> Offres d'emploi</a></li>
-               </ul>
-            </li>
-         </ul>
-      </div>
+      <div class="loader"></div>
+
+      <div id="c-bar">
+         <div class="c-header"></div>
+ 
+         <input type="checkbox" class="c-btn-toggle" id="btnToggle">
+         <label class="c-btn-icon" for="btnToggle">
+            <div class="c-btn-bar c-btn-bar--diagonal diagonal-1"></div>
+            <div class="c-btn-bar c-btn-bar--horizontal"></div>
+            <div class="c-btn-bar c-btn-bar--diagonal diagonal-2"></div>
+         </label>
+   
+         <div class="c-sidebar">
+            <ul class="side-bar items">
+               <li><img id="c-imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" style="width : 200px"></li>
+               <li><a href="accueil.html">Accueil</a></li>
+               <li class="c-deroulant">
+                  <a href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
+                  <ul class="c-sous">
+                     <li><a href="thematiques de recherche.html">Thématiques de Recherche</a></li>
+                     <li><a href="plateformes technologiques.html">Plateformes Technologiques</a></li>
+                  </ul>
+               </li>
+               <li><a href="membres.html">Membres</a></li>
+               <li><a href="projets.html">Projets</a></li>
+               <li><a href="publications.html">Publications</a></li>
+               <li><a href="partenaires.html">Partenaires</a></li>
+               <li class="c-deroulant">
+                  <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
+                  <ul class="c-sous">
+                     <li><a href="contactez-nous.html"> Contactez-nous</a></li>
+                     <li><a href="plan d'acces.html"> Plan d'accès</a></li>
+                     <li><a href="offres d'emploi.html"> Offres d'emploi</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+     </div>
 
 
 
@@ -55,31 +62,35 @@
 
       <nav>
          <ul>
+            <li>
+               <ul id="horlogeid"></ul>
+               <ul id="compte"></ul>
+            </li>
             <li><a class="button" href="accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
             <li class="deroulant">
                <a class="button" href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
                <ul class="sous">
-                  <li><a href="thematiques de recherche.html">Thématiques de Recherche</a></li>
-                  <li><a href="plateformes technologiques.html">Plateformes Technologiques</a></li>
+                  <li><a class="button" href="thematiques de recherche.html">Thématiques de Recherche</a></li>
+                  <li><a class="button" href="plateformes technologiques.html">Plateformes Technologiques</a></li>
                </ul>
             </li>
-
-            <li><a class="button" href="membres.html"><i class="fa-sharp fa-solid fa-user"></i> Membres</a></li>
+            
+            <li><a id="memBut" class="button"><i class="fa-sharp fa-solid fa-user"></i> Membres</a></li>
             <li><a class="button" href="projets.html"><i class="fa-sharp fa-solid fa-briefcase"></i> Projets</a></li>
             <li><a class="button" href="publications.html"><i class="fa-solid fa-camera-retro"></i> Publications</a></li>
             <li><a class="button" href="partenaires.html"><i class="fa-solid fa-handshake"></i> Partenaires</a></li>
             <li class="deroulant">
                <a class="button"><i class="fa-sharp fa-solid fa-circle-info"></i> Infos et Contacts</a>
                <ul class="sous">
-                  <li><a href="contactez-nous.html"> Contactez-nous</a></li>
-                  <li><a href="plan d'acces.html"> Plan d'accès</a></li>
-                  <li><a href="offres d'emploi.html"> Offres d'emploi</a></li>
+                  <li><a class="button" href="contactez-nous.html"> Contactez-nous</a></li>
+                  <li><a class="button" href="plan d'acces.html"> Plan d'accès</a></li>
+                  <li><a class="button" href="offres d'emploi.html"> Offres d'emploi</a></li>
                </ul>
             </li>
-            <li><img id="imgLab" src="Images/LabISEN.png" alt="Logo LabISEN"></li>
+            <li><img id="imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" onclick="redirect()"></li>
          </ul>
       </nav>
-
+      
       <div id="contenuMembres">
          <h1>Enseignements chercheurs et permanents</h1>
          <div class="EnsCherPerma">

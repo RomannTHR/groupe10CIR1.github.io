@@ -3,6 +3,7 @@
 
     <head>
       <meta charset="utf-8">
+      <script src="JS/menu.js" defer></script>
       <link href="style.css" rel="stylesheet">
       <title>Plateformes technologiqus</title>
       <script src="https://kit.fontawesome.com/bdc17f5942.js" crossorigin="anonymous"></script>
@@ -12,8 +13,10 @@
 
 
    <body id="bodyacceuil">
+      <div class="loader"></div>
 
     <div id="c-bar">
+
         <div class="c-header"></div>
 
         <input type="checkbox" class="c-btn-toggle" id="btnToggle">
@@ -60,6 +63,10 @@
 
       <nav>
          <ul>
+            <li>
+               <ul id="horlogeid"></ul>
+               <ul id="compte"></ul>
+            </li>
             <li><a class="button" href="accueil.html"><i class="fa-solid fa-house"></i> Accueil</a></li>
             <li class="deroulant">
                <a class="button href="#"><i class="fa-sharp fa-solid fa-magnifying-glass"></i> Recherche</a>
@@ -69,7 +76,7 @@
                </ul>
             </li>
 
-            <li><a class="button" href="membres.html"><i class="fa-sharp fa-solid fa-user"></i> Membres</a></li>
+            <li><a class="button" id="memBut" href="membres.html"><i class="fa-sharp fa-solid fa-user"></i> Membres</a></li>
             <li><a class="button" href="projets.html"><i class="fa-sharp fa-solid fa-briefcase"></i> Projets</a></li>
             <li><a class="button" href="publications.html"><i class="fa-solid fa-camera-retro"></i> Publications</a></li>
             <li><a class="button" href="partenaires.html"><i class="fa-solid fa-handshake"></i> Partenaires</a></li>
