@@ -4,6 +4,7 @@
     <head>
       <meta charset="utf-8">
       <script src="JS/menu.js" defer></script>
+      <script src="JS/contactez-nous.js" defer></script>
       <link href="style.css" rel="stylesheet">
       <title>Contactez-nous</title>
       <script src="https://kit.fontawesome.com/bdc17f5942.js" crossorigin="anonymous"></script>
@@ -87,17 +88,17 @@
    </nav>
 
 
-      <div>
+      <div id="divContactez">
          <form action="contatcez-nous.html" method="get">
             <p>Contactez le responsable de l’équipe :Maher Jridi - maher.jridi@isen-ouest.yncrea.fr</p>
             <div class="form">
                 <img class="imgForm" src="Images/person.png">
-                <input type="text" name="Name and firstname" placeholder="Prénom et Nom">
+                <input id="textForm" type="text" name="Name and firstname" placeholder="Prénom et Nom">
             </div>
             <br>
             <div class="form">
                 <img class="imgForm" src="Images/arolbase.png">
-                <input type="text" name="email" placeholder="email@example.com">
+                <input id="mailText" type="text" name="email" placeholder="email@example.com">
             </div>
             <br><br>
             <div class="form">
@@ -105,12 +106,31 @@
              </div>
             <br>
             <br>
-             <input class="down" type="reset" value="Annuler">
-            <input class="down" type="submit" value="Valider">
-               
-          </form>
-    
+            <input class="down validButton" type="reset" value="Annuler">
+            <input class="down validButton modal-btn modal-trigger" type="button" value="Valider">       
+         </form>
       </div>
+
+
+      <div class="modal-container">
+         <div class="overlay modal-trigger"></div>
+         <div class= "modal">
+            <div id="game">
+               <div id="choice">
+                  <div class="close-modal modal-trigger" style="display: none;">X</div>
+                  <h2>Le lancé de Dé - Règles</h2>
+                  <p style="margin-bottom: 1vw; margin-top: 2vw;">Le jeu est simple, choisissez 3 nombres entre <b>1 et 6</b>, si l'un de vos nombres correspondent au bon numéro, alors vous gagnez, sinon vous perdez.</p>
+                  <p style="margin-bottom: 1vw;">En cas de victoire, votre message sera envoyé au destinataire, mais en cas de défaite le formulaire sera entièrement réintialisé !</p>
+                  <p>Choix n°1</p><input type="text" class="choixV" value="">
+                  <p>Choix n°2</p><input type="text" class="choixV" value="">
+                  <p>Choix n°3</p><input type="text" class="choixV" value="">
+                  <button id="confirmButton">Valider</button>
+                  <image id="imgDe" src="Images/de.png"></image>
+               </div>
+            </div>
+         </div>
+      </div>
+      
 
 
 

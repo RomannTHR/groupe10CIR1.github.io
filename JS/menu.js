@@ -1,3 +1,5 @@
+/// Fonctions horloge et timer//
+
 
 function afficherZero(nombre){
     if(nombre<10){
@@ -10,7 +12,7 @@ function horloge(){
     let dateH = new Date();
     let element = document.getElementById("horlogeid");
     element.style.marginTop = "0.5vw";
-;    element.innerText = afficherZero(dateH.getHours()) + ":" + afficherZero(dateH.getMinutes()) + ":" + afficherZero(dateH.getSeconds());
+    element.innerText = afficherZero(dateH.getHours()) + ":" + afficherZero(dateH.getMinutes()) + ":" + afficherZero(dateH.getSeconds());
 
 }
 
@@ -18,14 +20,29 @@ setInterval(horloge, 1000);
 
 let temps = 0;
 
+function underTen(number){ // si un nombre est en dessous de 10 on l'affiche avec un zéro en plus au début pour le timer
+    if(number<10){
+        return '0' + number;
+    }
+    else{
+        return number;
+    }
+}
 
 
-
-function compteur(){
+function compteur(){ // function qui permet d'afficher le compteur dans le menu
     let element = document.getElementById("compte"); // on récupère l'id du compteur
-    element.innerHTML = '<i class="fa-sharp fa-solid fa-forward"></i> '+ ' '+ ' Timer : ' + temps;
+    let minutes = parseInt(temps / 60, 10);
+    let secondes = parseInt(temps % 60, 10);
+    element.innerHTML = '<i class="fa-sharp fa-solid fa-forward"></i> '+ ' '+ ' Timer : ' +  underTen(minutes) + ":" + underTen(secondes);
     temps++;
 }
+
+
+// on va venir répeter la fonction compteur toutes les 1s pour qu'elle s'actualise en temps réel
+setInterval(compteur,1000);
+
+
 
 
 
@@ -42,15 +59,10 @@ memberBut.addEventListener("click", function() {
     else{ // sinon on rafraichit la page
         window.location.reload();
     }
-
-
 });
 
 
 
-
-// on va venir répeter la fonction compteur toutes les 1s pour qu'elle s'actualise en temps réel
-setInterval(compteur,1000);
 
 function redirect(){
     window.location.href = "accueil.html";
@@ -94,10 +106,9 @@ for(let i=0;i<size;i++){
 var bodyC = document.getElementsByTagName("body")[0];
 
 var contentC = bodyC.children[3];
-
+contentC.style.display = "none";
 
 window.addEventListener("load", function() {
-    contentC.style.display = "none";
     setTimeout(function() {
         
         document.getElementsByClassName("loader")[0].style.display = "none";
@@ -107,6 +118,46 @@ window.addEventListener("load", function() {
         document.getElementsByTagName("footer")[0].style.display = "flex";
     }, 2000);
 });
+
+
+//Evenements liés aux téléphones//
+
+
+let footer = document.getElementsByTagName("footer")[0];
+let footerChild = footer.children;
+
+let size2 = footerChild.length;
+
+let audio = new Audio("ringtone.mp3");
+
+
+
+
+
+
+for(let i=0;i<size2;i++){
+    let num = footerChild[i].getElementsByTagName("a")[0];
+    num.addEventListener("copy",function () {
+        let avis = prompt("Si vous voulez appeler ce numéro : "+ num.innerHTML +  " , entrez le de nouveau dans le champ ci-dessous puis validez ");
+
+        if(avis == num.innerHTML){
+            let time = 0;
+            console.log("vous appelez ce numéro: " + num.innerHTML);
+            audio.play();
+            audio.volume = 0.1;
+            setInterval(function() {
+                time = time + 1;
+                if(time == 5){
+                    audio.pause();
+                    return;
+                }
+            },1000);
+        }
+    });
+}
+
+
+
 
 
 
