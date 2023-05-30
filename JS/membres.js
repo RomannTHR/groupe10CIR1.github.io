@@ -16,6 +16,24 @@ function admin(id){
             document.getElementById("addmember").remove();
             document.getElementById("modeedition").style.background="white";
             inputs.forEach(elements => elements.setAttribute("readOnly","readOnly"));
+            let cards = document.querySelectorAll(".card");
+            cards.forEach(function(e){
+                let paras = e.querySelectorAll("input");
+                let size = paras.length;
+                for(let i=1;i<size;i++){
+                    let para = document.createElement("p");
+                    para.innerHTML = paras[i].value;
+                    let attribus = paras[i].getAttribute("class");
+                    para.setAttribute("class",attribus);
+                    paras[i].insertAdjacentElement("afterend",para);
+                    paras[i].remove();
+                }
+            });
+
+
+
+
+
             return;//cela arrête la boucle pour éviter qu'il y ait un autre prompt pour demander de rentrer l'username.
         }
     }
@@ -46,7 +64,21 @@ function admin(id){
                 alert('mot de passe incorrect');
             }
             inputs.forEach(elements => elements.removeAttribute("readonly"));
+            
         }
+        let cards = document.querySelectorAll(".card");
+        cards.forEach(function(e){
+            let paras = e.querySelectorAll("p");
+            paras.forEach(function(elements){
+                let para = document.createElement("input");
+                para.value = elements.innerHTML;
+                let attribus = elements.getAttribute("class");
+                para.setAttribute("class",attribus);
+                para.setAttribute("type","text");
+                elements.insertAdjacentElement("afterend",para);
+                elements.remove();
+            });
+        });
     }
     
 }
@@ -96,11 +128,11 @@ function addmember(id){
           <a href="https://www.researchgate.net/profile/Ayoub_Karine?ev=hdr_xprf&_sg=eJkSR2ljqVo6Ub414o2YwqTDXE2e1tV5SPoWZQv35B3oJoSgYfbNmLlZt57lBUJCiaEapS_Iz82ix5Z6XveLFdaC" target="_blank"><img class="imgCard" src="Images/researchgate.png" alt="logoResearchGate"></a>
        </div>
        <div class="keyWords">
-       <input type="text" id="name" value="" >
-       <input type="text" id="name" value="" >
-       <input type="text" id="name" value="" >
-       <input type="text" id="name" value="" >
-       <input type="text" id="name" value="" >
+       <input class="tag" type="text" id="name" value="" >
+       <input class="tag" type="text" id="name" value="" >
+       <input class="tag" type="text" id="name" value="" >
+       <input class="tag" type="text" id="name" value="" >
+       <input class="tag" type="text" id="name" value="" >
        </div> 
     </div>
     <input id="supprmember" onclick="supprmember(member`+numberOfMembers+`)"type="submit" value="supprimer ce membre ">
@@ -109,6 +141,9 @@ function addmember(id){
     body.style.flexWrap = "wrap";
     body.style.justifyContent = "space-around";
     body.style.textAlign = "center";
+
+    
+
 
     document.getElementsByClassName('image-input')[0].addEventListener('change', function(e) {
         var file = e.target.files[0];
