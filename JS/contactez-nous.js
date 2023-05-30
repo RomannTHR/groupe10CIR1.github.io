@@ -175,11 +175,10 @@ buttonV.addEventListener("click",function (){
         let randomNumber = getRandomInt(1,7);
         
         //si l'une des valeurs correspondent au nombre généré aléatoirement, alors on envoie le message, sinon on reset la page et le form 
-
+        let closeModal = document.getElementsByClassName("close-modal")[0];
         if(valueChoice1 == randomNumber || valueChoice2== randomNumber || valueChoice3 == randomNumber){
             alert("Vous avez gagné, le numéro tiré était : " + randomNumber);
             alert("Le message a été envoyé avec succès");
-            let closeModal = document.getElementsByClassName("close-modal")[0];
 
             closeModal.style.display = "block";
         }
@@ -187,8 +186,11 @@ buttonV.addEventListener("click",function (){
         
         else{
             alert("Vous avez perdu, le numéro tiré était : " + randomNumber);
-            alert("Votre page va être réintialisée.");
-            window.location.reload();
+            alert("Votre formulaire va être réintialisé.");
+            closeModal.style.display = "block";
+            getText.value= "";
+            mailText.value = "";
+            messText.value = "";
         }
     
     },4000);

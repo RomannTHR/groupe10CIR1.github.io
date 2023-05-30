@@ -36,6 +36,7 @@ nav ul li a {
     margin: .5em; 
     text-decoration: none;
     color:black;
+    cursor : pointer;
 }
 
 nav li{
@@ -1069,6 +1070,9 @@ form input{
 }
 
 
+/*Page projets*/
+
+
 #main{
     display: flex;
     flex-direction: column;
@@ -1123,6 +1127,13 @@ form input{
     grid-column-start: 2;
     grid-column-end: 4;
 }
+
+#upperArrow{
+    text-align: right;
+    cursor :pointer;
+    margin-right : 5vw;
+}
+
 
 @media screen and (max-width : 980px){
     #main{
