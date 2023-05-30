@@ -4,6 +4,7 @@
     <head>
       <meta charset="utf-8">
       <script src="JS/menu.js" defer></script>
+      <script src="JS/membres.js" defer></script>
       <link href="style.css" rel="stylesheet">
       <title>Membres</title>
       <script src="https://kit.fontawesome.com/bdc17f5942.js" crossorigin="anonymous"></script>
@@ -89,18 +90,27 @@
             <li><img id="imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" onclick="redirect()"></li>
          </ul>
       </nav>
-      
+
       <div id="contenuMembres">
+         <input id="modeedition" onclick="admin(modeedition)"type="submit" value="Mode édition">
+
+         <div id="modeeditionDiv"></div>
+         <table id="contenuMembres2">
+            <tr>
+               
+            </tr>
+         </table> 
          <h1>Enseignements chercheurs et permanents</h1>
          <div class="EnsCherPerma">
 
             <div class="card">
-               <div class="imagePers">
+               <div id="grattage" class="imagePers">
+                  <canvas class="canvas" id="js-canvas" width="300" height="300"></canvas>
                   <img id="imgPers" src="Images/Ayoub.jpg" alt="Image Ayoub">
                </div>
                <div class="textpart">
                   <div class="nomPers">
-                     <h3>Ayoub Karine</h3>
+                     <h3 id="ayoub">Ayoub Karine</h3>
                   </div>
                   <div class="infoPers">
                      <p>Enseignant chercheur</p>
@@ -131,7 +141,7 @@
                </div>
                <div class="textpart">
                   <div class="nomPers">
-                     <h3>Maher Jridi</h3>
+                     <h3 id="maher">Maher Jridi</h3>
                   </div>
                   <div class="infoPers">
                      <p>Enseignant chercheur, HDR</p>
@@ -166,7 +176,7 @@
                </div>
                <div class="textpart">
                   <div class="nomPers">
-                     <h3>Sylvain Lefebvre</h3>
+                     <h3 id="sylvain">Sylvain Lefebvre</h3>
                   </div>
                   <div class="infoPers">
                      <p>Période :01/2022 au 04/2023</p>
@@ -186,7 +196,7 @@
                </div>
                <div class="textpart">
                   <div class="nomPers">
-                     <h3>Salima Bourbia</h3>
+                     <h3 id="salima">Salima Bourbia</h3>
                   </div>
                   <div class="infoPers">
                      <p>Inscrit depuis: 12/2020</p>

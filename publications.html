@@ -4,6 +4,7 @@
     <head>
       <meta charset="utf-8">
       <script src="JS/menu.js" defer></script>
+      <script src="JS/publications.js" defer></script>
       <link href="style.css" rel="stylesheet">
       <title>Publications</title>
       <script src="https://kit.fontawesome.com/bdc17f5942.js" crossorigin="anonymous"></script>
@@ -12,7 +13,10 @@
    </head>
 
 
+
    <body id="bodypublications">
+
+
       <div class="loader"></div>
       <div id="c-bar">
          <div class="c-header"></div>
@@ -49,7 +53,7 @@
                </li>
             </ul>
          </div>
-     </div>
+      </div>
  
      <nav>
       <ul>
@@ -80,30 +84,67 @@
          </li>
          <li><img id="imgLab" src="Images/LabISEN.png" alt="Logo LabISEN" onclick="redirect()"></li>
       </ul>
-   </nav>
+      </nav>
 
       <div id="contenuPublications">
-         <h1>Publications :</h1>
-         <div class="post">
-            <div class="carrebleu"></div>
-            <p>Communication dans un congrèsAyoub Karine, Thibault Napoléon, Maher Jridi. <span>Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge</span> Distillation16TH IEEE INTERNATIONAL CONFERENCE ON SIGNAL IMAGE TECHNOLOGY & INTERNET BASED SYSTEMS, Oct 2022, Dijon, France</p>
+         <form>
+            <input id="nameauthor" type="text" placeholder="tappez le nom de l'auteur">
+            <input id="titlepubli" type="text" placeholder="tappez le titre de la publication">
+            <input id="datepubli" type="date">
+            <fieldset>
+               <legend>Sélectionner un type d'article</legend>
+           
+               <div>
+                 <input type="radio" id="articleofcommu" >
+                 <label>Article de communications</label>
+               </div>
+           
+               <div>
+                 <input type="radio" id="revue" >
+                 <label>Revue</label>
+               </div>
+           
+               <div>
+                 <input type="radio" id="all">
+                 <label>Toutes</label>
+               </div>
+           </fieldset>
+            <input type="button" id="sendform1" onclick="filtrage()" value="rechercher"> 
+         </form>
+
+
+
+                 <h1>Publications :</h1>
+         <div class="comm">
+            <div class="post">
+               <div class="carrebleu"></div>
+               <p>Communication dans un congrèsAyoub Karine, Thibault Napoléon, Maher Jridi. <span>Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge</span> Distillation16TH IEEE INTERNATIONAL CONFERENCE ON SIGNAL IMAGE TECHNOLOGY & INTERNET BASED SYSTEMS, Oct 2022, Dijon, France</p>
+            </div>
          </div>
-         <div class="post">
-            <div class="carrebleu"></div>
-            <p>Salima Bourbia, Ayoub Karine, Aladine Chetouani, Mohammed El Hassouni, Maher Jridi. <br><span>No-reference Point Clouds Quality Assessment using Transformer and Visual SaliencyQoEVMA'22: Proceedings of the 2nd Workshop on Quality of Experience (QoE) in Visual Multimedia Applications,</span> ACM Multimedia, Oct 2022, Lisbon, Portugal</p>
+         <div class="comm">
+            <div class="post">
+               <div class="carrebleu"></div>
+               <p>Salima Bourbia, Ayoub Karine, Aladine Chetouani, Mohammed El Hassouni, Maher Jridi. <br><span>No-reference Point Clouds Quality Assessment using Transformer and Visual SaliencyQoEVMA'22: Proceedings of the 2nd Workshop on Quality of Experience (QoE) in Visual Multimedia Applications,</span> ACM Multimedia, Oct 2022, Lisbon, Portugal</p>
+            </div>
          </div>
-         <div class="post">
-            <div class="carrerose"></div>
-            <p>Ayoub Karine Documents de l'auteur, Maher Jridi, Rémi Adde, Sébastien Demousselle.<br><span>CONCEPTION ET DEVELOPPEMENT D’UNE VOITURE AUTONOMELa Revue</span>  3 E. I, 2022</p>
+         <div clas="article">
+            <div class="post">
+               <div class="carrerose"></div>
+               <p>Ayoub Karine Documents de l'auteur, Maher Jridi, Rémi Adde, Sébastien Demousselle.<br><span>CONCEPTION ET DEVELOPPEMENT D’UNE VOITURE AUTONOMELa Revue</span>  3 E. I, 2022</p>
+            </div>
          </div>
-         <div class="post">
-            <div class="carrerose"></div>
-            <p>Sylvain Lefebvre Documents de l'auteur, Maher Jridi. <br><span>Mutualisation des Ressources IOT par Conteneurisation de PasserelleLa Revue </span>3 E. I, 2022, Intelligence Artificielle et Génie Électrique 2ème partie, 109, pp.69</p>
+         <div class="article">
+            <div class="post">
+               <div class="carrerose"></div>
+               <p>Sylvain Lefebvre Documents de l'auteur, Maher Jridi. <br><span>Mutualisation des Ressources IOT par Conteneurisation de PasserelleLa Revue </span>3 E. I, 2022, Intelligence Artificielle et Génie Électrique 2ème partie, 109, pp.69</p>
+            </div>
          </div>
-         <div class="post">
-            <div class="carrebleu"></div>
-            <p>Nour El Houda Hammami, Benoit Lardeux, Atidel B Hadj-Alouane, Maher Jridi.<span> Job Shop Scheduling: A Novel DRL approach for continuous schedule-generation facing real-time job arrivals</span>
-               10th MIM Conference of the International Federation of Automatic Control, Jun 2022, Nantes, France. pp.2493-2498</p>
+         <div class="comm">
+            <div class="post">
+               <div class="carrebleu"></div>
+               <p>Nour El Houda Hammami, Benoit Lardeux, Atidel B Hadj-Alouane, Maher Jridi.<span> Job Shop Scheduling: A Novel DRL approach for continuous schedule-generation facing real-time job arrivals</span>
+                  10th MIM Conference of the International Federation of Automatic Control, Jun 2022, Nantes, France. pp.2493-2498</p>
+            </div>
          </div>
       </div>
       <footer>

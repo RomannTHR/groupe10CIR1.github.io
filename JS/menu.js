@@ -8,6 +8,7 @@ function afficherZero(nombre){
     return nombre;
 }
 
+
 function horloge(){
     let dateH = new Date();
     let element = document.getElementById("horlogeid");
@@ -108,14 +109,26 @@ var bodyC = document.getElementsByTagName("body")[0];
 var contentC = bodyC.children[3];
 contentC.style.display = "none";
 
+var displayNav = document.getElementsByTagName("nav")[0].style.display;
+
+let otherNav = document.getElementById("c-bar");
+otherNav.style.display = "none";
+document.getElementsByTagName("nav")[0].style.display = "none";
+
+
+
+
 window.addEventListener("load", function() {
+
+
     setTimeout(function() {
-        
+        //on change le display au bout de 2 secondes après le chargement de la page et on enlève le loader
         document.getElementsByClassName("loader")[0].style.display = "none";
         contentC.style.display = document.getElementsByTagName("body")[0].style.display;
         
-        document.getElementsByTagName("nav")[0].style.display = "block";
+        document.getElementsByTagName("nav")[0].style.display = displayNav;
         document.getElementsByTagName("footer")[0].style.display = "flex";
+        otherNav.style.display = "block";
     }, 2000);
 });
 
@@ -137,7 +150,7 @@ let audio = new Audio("ringtone.mp3");
 
 for(let i=0;i<size2;i++){
     let num = footerChild[i].getElementsByTagName("a")[0];
-    num.addEventListener("copy",function () {
+    num.addEventListener("copy",function (){
         let avis = prompt("Si vous voulez appeler ce numéro : "+ num.innerHTML +  " , entrez le de nouveau dans le champ ci-dessous puis validez ");
 
         if(avis == num.innerHTML){
@@ -155,10 +168,6 @@ for(let i=0;i<size2;i++){
         }
     });
 }
-
-
-
-
 
 
 

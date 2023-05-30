@@ -19,7 +19,7 @@ html, body{
 
 
 nav{
-    display :none;
+    display :block;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     background-color: #C2C2C2;
@@ -725,8 +725,8 @@ footer h3{
 .modal-btn{
     border:none;
     cursor:pointer;
+    background-color: white;
 }
-
 
 
 
@@ -972,6 +972,8 @@ hr{
 
 
 
+
+
 /* Page Contactez-Nous */
     
 form{
@@ -1067,8 +1069,6 @@ form input{
 }
 
 
-/*projet*/
-
 #main{
     display: flex;
     flex-direction: column;
@@ -1157,8 +1157,9 @@ form input{
     #main .seas img{
         width : 50%;
     }
-
+    
 }
+
 
 #choice{
     display: flex;
@@ -1265,6 +1266,7 @@ form input{
     font-weight: bold;
     color: black;
 }
+
 
 
 
@@ -1394,6 +1396,7 @@ form input{
     margin-top : 2.5vw;
 }
 
+
 /*plan d'accès*/
 #bodyacces .site{
     margin: 50px;
@@ -1514,3 +1517,13 @@ form input{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
+  
+
+#modeedition{
+    float: right;
+}
+#modeeditionDiv{
+    float: right;
+}
