@@ -5,7 +5,6 @@ var modeedition=false;//variable qui indique si le mode d'édition est activée
 
 
 
-
 function admin(id){
     let inputs = document.querySelectorAll("input");
     inputs.forEach(elements => elements.style.textAlign = "center");
@@ -25,6 +24,15 @@ function admin(id){
                     para.innerHTML = paras[i].value;
                     let attribus = paras[i].getAttribute("class");
                     para.setAttribute("class",attribus);
+                    if(para.getAttribute("class") == "tag"){
+                        para.style.fontSize = "0.8vw";
+                    }
+                    if(para.getAttribute("class") == "namePers"){
+                        para.style.fontSize = "1.5vw";
+                    }
+                    else{
+                        para.style.fontSize = "1.5vh";
+                    }
                     paras[i].insertAdjacentElement("afterend",para);
                     paras[i].remove();
                 }
@@ -59,26 +67,25 @@ function admin(id){
                 maher.innerHTML='<input type="text" id="name" value="Maher Jridi"">'
                 salima.innerHTML='<input type="text" id="name" value="Salima Bourbia"0">'
                 sylvain.innerHTML='<input type="text" id="name" value="Sylvain Lefebvre"">'
+                let cards = document.querySelectorAll(".card");
+                cards.forEach(function(e){
+                    let paras = e.querySelectorAll("p");
+                    paras.forEach(function(elements){
+                        let para = document.createElement("input");
+                        para.value = elements.innerHTML;
+                        let attribus = elements.getAttribute("class");
+                        para.setAttribute("class",attribus);
+                        para.setAttribute("type","text");
+                        elements.insertAdjacentElement("afterend",para);
+                        elements.remove();
+                    });
+                });
             }
             else{
                 alert('mot de passe incorrect');
             }
-            inputs.forEach(elements => elements.removeAttribute("readonly"));
             
         }
-        let cards = document.querySelectorAll(".card");
-        cards.forEach(function(e){
-            let paras = e.querySelectorAll("p");
-            paras.forEach(function(elements){
-                let para = document.createElement("input");
-                para.value = elements.innerHTML;
-                let attribus = elements.getAttribute("class");
-                para.setAttribute("class",attribus);
-                para.setAttribute("type","text");
-                elements.insertAdjacentElement("afterend",para);
-                elements.remove();
-            });
-        });
     }
     
 }
@@ -89,13 +96,16 @@ function supprmember(id){
 
 let ish1 = false;
 
+
+
 function addmember(id){
+
     numberOfMembers++;//indentation du nombre de nouveaux membres
     let body=document.getElementById("contenuMembres2");
-
     body.style.display = "flex";
     body.style.flexDirection = "row";
-    
+
+
     if(!ish1){
         let titre = document.createElement("h1");
         body.insertAdjacentElement("beforebegin", titre);
@@ -108,17 +118,17 @@ function addmember(id){
 
     let text =`<div class="card" id="member`+numberOfMembers+`">
     <div class="imagePers">
-    <input type="file" id="imgPers" class= "image-input" src="" alt="Image"  accept="image/*">
-    <div id="image-preview"></div>
+    <input type="file" id="imgPers" class="image-input" src="" alt="Image"  accept="image/*">
+    <div class="image-preview"></div>
     </div>
     <div class="textpart">
        <div class="nomPers">
-        <input type="text" id="name" value="" ;font-size: 20px;">
+        <input type="text" class="namePers" id="name" value="" ;font-size: 20px;">
        </div>
        <div class="infoPers">
-        <input type="text" id="name" value="Type de personne">
-        <input type="text" id="name" value="lieu d'activité" >
-        <input type="text" id="name" value="adresse email" >
+        <input type="text" class="infosPers" id="name" value="Type de personne">
+        <input type="text" class="infosPers" id="name" value="lieu d'activité" >
+        <input type="text" class="infosPers" id="name" value="adresse email" >
        </div>
        <hr>
        <div class="logoPers">
@@ -142,30 +152,31 @@ function addmember(id){
     body.style.justifyContent = "space-around";
     body.style.textAlign = "center";
 
+
+    let nbCard = document.getElementsByClassName('image-input').length;
     
 
-
-    document.getElementsByClassName('image-input')[0].addEventListener('change', function(e) {
-        var file = e.target.files[0];
-        var reader = new FileReader();
-        
-
-
-        reader.onload = function(e) {
-          var imagePreview = document.getElementById('image-preview');
-          imagePreview.innerHTML = '';
-      
-          var img = new Image();
-          img.src = e.target.result;
-          img.style.maxWidth = '100%';
-          img.style.maxHeight = '100%';
-      
-          imagePreview.appendChild(img);
-
-        };
-      
-        reader.readAsDataURL(file);
-        document.getElementsByClassName('image-input')[0].remove();
-    });
+    for(let i=0;i<nbCard;i++){
+        document.getElementsByClassName('image-input')[i].addEventListener('change', function(e){
+            var file = e.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              var imagePreview = document.getElementsByClassName('image-preview')[i];
+              console.log(document.getElementsByClassName('image-preview')[i]);
+              imagePreview.innerHTML = '';
+          
+              var img = new Image();
+              img.src = e.target.result;
+              img.style.maxWidth = '100%';
+              img.style.maxHeight = '100%';
+          
+              imagePreview.appendChild(img);
+            };
+            
+            reader.readAsDataURL(file);
+            document.getElementsByClassName('image-input')[i].style.display = "none";
+        });
+    }
 
 }
+
