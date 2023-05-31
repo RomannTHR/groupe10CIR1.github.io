@@ -16,10 +16,13 @@ function admin(id){
             document.getElementById("modeedition").style.background="white";
             inputs.forEach(elements => elements.setAttribute("readOnly","readOnly"));
             let cards = document.querySelectorAll(".card");
+            document.querySelectorAll(".supprimerMembre").forEach(function(e){
+                e.style.display = "none";
+            });
             cards.forEach(function(e){
                 let paras = e.querySelectorAll("input");
                 let size = paras.length;
-                for(let i=1;i<size;i++){
+                for(let i=1;i<size-1;i++){
                     let para = document.createElement("p");
                     para.innerHTML = paras[i].value;
                     let attribus = paras[i].getAttribute("class");
@@ -29,10 +32,14 @@ function admin(id){
                     }
                     if(para.getAttribute("class") == "namePers"){
                         para.style.fontSize = "1.5vw";
+                        para.style.fontStyle ="bold";
                     }
+
                     else{
                         para.style.fontSize = "1.5vh";
                     }
+
+
                     paras[i].insertAdjacentElement("afterend",para);
                     paras[i].remove();
                 }
@@ -68,18 +75,23 @@ function admin(id){
                 salima.innerHTML='<input type="text" id="name" value="Salima Bourbia"0">'
                 sylvain.innerHTML='<input type="text" id="name" value="Sylvain Lefebvre"">'
                 let cards = document.querySelectorAll(".card");
-                cards.forEach(function(e){
-                    let paras = e.querySelectorAll("p");
-                    paras.forEach(function(elements){
+                document.querySelectorAll(".supprimerMembre").forEach(function(e){
+                    e.style.display = "block";
+                });
+                for(let i=0;i<cards.length;i++){
+                    let paras = cards[i].querySelectorAll("p");
+                    for(let j=0;j<paras.length;j++){
                         let para = document.createElement("input");
-                        para.value = elements.innerHTML;
-                        let attribus = elements.getAttribute("class");
+                        para.value = paras[j].innerHTML;
+                        let attribus = paras[j].getAttribute("class");
                         para.setAttribute("class",attribus);
                         para.setAttribute("type","text");
-                        elements.insertAdjacentElement("afterend",para);
-                        elements.remove();
-                    });
-                });
+                        paras[j].insertAdjacentElement("afterend",para);
+                        paras[j].remove();
+                    }
+                }
+
+                
             }
             else{
                 alert('mot de passe incorrect');
@@ -145,7 +157,7 @@ function addmember(id){
        <input class="tag" type="text" id="name" value="" >
        </div> 
     </div>
-    <input id="supprmember" onclick="supprmember(member`+numberOfMembers+`)"type="submit" value="supprimer ce membre ">
+    <input id="supprmember" class="supprimerMembre" onclick="supprmember(member`+numberOfMembers+`)"type="submit" value="supprimer ce membre ">
  </div>`//on insère le schéma modifiable d'une carte à cette ligne avec un id propre qui dépend du nombre de membres.
     body.innerHTML = body.innerHTML + text;
     body.style.flexWrap = "wrap";
