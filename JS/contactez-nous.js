@@ -167,23 +167,26 @@ buttonV.addEventListener("click",function (){
         clearInterval(rotation);
         let divChoice = document.getElementById("choice");
 
+
+        //Choix des valeurs de l'utilisateur
         let valueChoice1 = document.getElementsByClassName("choixV")[0].value;
         let valueChoice2 = document.getElementsByClassName("choixV")[1].value;
         let valueChoice3 = document.getElementsByClassName("choixV")[2].value;
         
     
-        let randomNumber = getRandomInt(1,7);
+        let randomNumber = getRandomInt(1,7); // on récupère un nombre aléatoire entre 0 et 6
         
-        //si l'une des valeurs correspondent au nombre généré aléatoirement, alors on envoie le message, sinon on reset la page et le form 
         let closeModal = document.getElementsByClassName("close-modal")[0];
+
+        //si l'une des valeurs correspondent au nombre généré aléatoirement, alors on envoie le message
         if(valueChoice1 == randomNumber || valueChoice2== randomNumber || valueChoice3 == randomNumber){
             alert("Vous avez gagné, le numéro tiré était : " + randomNumber);
             alert("Le message a été envoyé avec succès");
 
-            closeModal.style.display = "block";
+            closeModal.style.display = "block"; // on affiche le bouton pour fermer le jeu
         }
 
-        
+        //si il perd, on reset le formulaire
         else{
             alert("Vous avez perdu, le numéro tiré était : " + randomNumber);
             alert("Votre formulaire va être réintialisé.");

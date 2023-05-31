@@ -8,18 +8,20 @@ var modeedition=false;//variable qui indique si le mode d'édition est activée
 function admin(id){
     let inputs = document.querySelectorAll("input");
     inputs.forEach(elements => elements.style.textAlign = "center");
+    //si l'utilisateur veut sortir du moed edition
     if(modeedition==true){
         let interrompt = window.prompt('entrez exit pour fermer le menu sinon cliquer quelque part');
+        //si il comfirme en entrant exit
         if(interrompt=='exit'){
             modeedition=false;
             document.getElementById("addmember").remove();
             document.getElementById("modeedition").style.background="white";
-            inputs.forEach(elements => elements.setAttribute("readOnly","readOnly"));
+            inputs.forEach(elements => elements.setAttribute("readOnly","readOnly")); //ne peut plus edit les input
             let cards = document.querySelectorAll(".card");
-            document.querySelectorAll(".supprimerMembre").forEach(function(e){
+            document.querySelectorAll(".supprimerMembre").forEach(function(e){ //enlève le bouton "supprimer le membre"
                 e.style.display = "none";
             });
-            cards.forEach(function(e){
+            cards.forEach(function(e){ // on transforme les input en des paragraphes en reprennant la valeur du input
                 let paras = e.querySelectorAll("input");
                 let size = paras.length;
                 for(let i=1;i<size-1;i++){
@@ -27,6 +29,8 @@ function admin(id){
                     para.innerHTML = paras[i].value;
                     let attribus = paras[i].getAttribute("class");
                     para.setAttribute("class",attribus);
+
+                    //attributs de style en fonction des éléments
                     if(para.getAttribute("class") == "tag"){
                         para.style.fontSize = "0.8vw";
                     }
@@ -41,7 +45,7 @@ function admin(id){
 
 
                     paras[i].insertAdjacentElement("afterend",para);
-                    paras[i].remove();
+                    paras[i].remove(); // on enlève le input précédent
                 }
             });
 
@@ -75,10 +79,10 @@ function admin(id){
                 salima.innerHTML='<input type="text" id="name" value="Salima Bourbia"0">'
                 sylvain.innerHTML='<input type="text" id="name" value="Sylvain Lefebvre"">'
                 let cards = document.querySelectorAll(".card");
-                document.querySelectorAll(".supprimerMembre").forEach(function(e){
+                document.querySelectorAll(".supprimerMembre").forEach(function(e){ // on affiche le bouton "supprimer le membre"
                     e.style.display = "block";
                 });
-                for(let i=0;i<cards.length;i++){
+                for(let i=0;i<cards.length;i++){ // on rempace tous les paragraphes en input pour que l'utilisateur puisse modifier les informations
                     let paras = cards[i].querySelectorAll("p");
                     for(let j=0;j<paras.length;j++){
                         let para = document.createElement("input");
@@ -168,7 +172,7 @@ function addmember(id){
     let nbCard = document.getElementsByClassName('image-input').length;
     
 
-    for(let i=0;i<nbCard;i++){
+    for(let i=0;i<nbCard;i++){ //cette bouble permet à l'utilisateur d'être en mesure de choisir une image lorsqu'il ajoute un membre
         document.getElementsByClassName('image-input')[i].addEventListener('change', function(e){
             var file = e.target.files[0];
             var reader = new FileReader();
