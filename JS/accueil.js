@@ -33,13 +33,13 @@ window.addEventListener("load",function (){
                 setTimeout(function (){
                     clearInterval(actualiser);
                     setTimeout(function (){
-                        pos.style.marginLeft = "4vw";
+                        pos.style.textAlign = "right";
                     },1000);
                     setTimeout(function (){
-                        pos.style.marginLeft = "-4vw";
+                        pos.style.textAlign = "left";
                     },2000);
                     setTimeout(function (){
-                        pos.style.marginLeft = "0vw";
+                        pos.style.textAlign = "center";
                     },3000);
         
                     setTimeout(function (){

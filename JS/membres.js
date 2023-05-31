@@ -174,7 +174,6 @@ function addmember(id){
             var reader = new FileReader();
             reader.onload = function(e) {
               var imagePreview = document.getElementsByClassName('image-preview')[i];
-              console.log(document.getElementsByClassName('image-preview')[i]);
               imagePreview.innerHTML = '';
           
               var img = new Image();
